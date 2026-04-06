@@ -1,0 +1,15 @@
+{
+    auto_https off
+}
+
+:80 {
+    root * /usr/share/caddy
+    file_server
+    encode gzip
+    
+    # Enable logging
+    log {
+        output stdout
+        format console
+    }
+}
